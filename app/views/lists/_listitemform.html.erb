@@ -1,0 +1,6 @@
+<%= form_for(:listitem) do |f| %>
+    <div class="form-group">
+        <%= f.text_field :item_text, :placeholder => "Name item", :class => "form-control" %>
+    </div>
+    <%= f.submit %>
+<% end %>

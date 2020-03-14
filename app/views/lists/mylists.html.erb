@@ -1,0 +1,17 @@
+<div class="row">
+  <% @lists.each do |l|%>
+  <div class="col-sm-3">
+    <div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><%= l.list_title %></h5>
+    <ul>
+      <li><%= l.country %></li>
+      <li><%= l.town %></li>
+      <li><%= l.postcode %></li>
+    </ul>
+    <%= link_to "Go To List!", list_url(l.id), :class => "btn btn-primary"%>
+  </div>
+  </div>
+</div>
+  <% end%>
+</div>

@@ -1,0 +1,28 @@
+<h2><%= @list.name %></h2>
+
+<div class="col-sm-3">
+</div>
+
+<div class="col-sm-6">
+
+<ul class="list-group list-group-flush">
+<% if @list.listitems.exists? %>
+    <% @list.listitems.each do |ll| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center"><%= ll.item_text %>
+        <span class="badge badge-primary badge-pill"><%= ll.item_count %></span></li>
+    <% end %>
+<% end %>
+</ul>
+<br>
+
+<%= form_for([@list, @list.listitems.build], {class: "inline-form"}) do |f| %>
+    <div class="form-group">
+        <%= f.text_field :item_text, :placeholder => "Name item", :class => "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.text_field :item_count, :placeholder => "Item count", :class => "form-control" %>
+    </div>
+    <%= f.submit "Save", :class => "btn btn-success" %>
+<% end %>
+
+</div>
