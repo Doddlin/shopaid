@@ -1,6 +1,22 @@
 <h2><%= @list.name %></h2>
+<div class="row">
 
 <div class="col-sm-3">
+    <div class="card">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+      <span class=""><strong>Country:</strong></span>
+      <p class=""><%= @list.country %></p>
+      <span class=""><strong>Town:</strong></span>
+      <p class=""><%= @list.town %></p>
+      <span class=""><strong>Postcode:</strong></span>
+      <p class=""><%= @list.postcode %></p>
+      <span class=""><strong>Phone:</strong></span>
+      <p class=""><%= @list.phone %></p>
+      <span class=""><strong>Email:</strong></span>
+      <p class=""><%= User.find(@list.user_id).email %></p>
+    </div>
+    </div>
 </div>
 
 <div class="col-sm-6">
@@ -11,18 +27,37 @@
         <li class="list-group-item d-flex justify-content-between align-items-center"><%= ll.item_text %>
         <span class="badge badge-primary badge-pill"><%= ll.item_count %></span></li>
     <% end %>
+<% else %>
+        <span>List is currently empty</span>
 <% end %>
 </ul>
 <br>
 
-<%= form_for([@list, @list.listitems.build], {class: "inline-form"}) do |f| %>
-    <div class="form-group">
-        <%= f.text_field :item_text, :placeholder => "Name item", :class => "form-control" %>
-    </div>
-    <div class="form-group">
-        <%= f.text_field :item_count, :placeholder => "Item count", :class => "form-control" %>
-    </div>
-    <%= f.submit "Save", :class => "btn btn-success" %>
+<% if user_signed_in? && @list.user_id == current_user.id %>
+    <%= form_for([@list, @list.listitems.build], {class: "inline-form"}) do |f| %>
+        <div class="form-group">
+            <%= f.text_field :item_text, :placeholder => "Name item", :class => "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.text_field :item_count, :placeholder => "Item count", :class => "form-control" %>
+        </div>
+        <%= f.submit "Save", :class => "btn btn-success" %>
+    <% end %>
+    <br>
+    <%= link_to 'Destroy', @list, :method => :delete, :confirm => "Are you sure?", :class => "btn btn-danger" %>
+    <br>
 <% end %>
+
+<% if @list.assigned_to == current_user.id? %>
+    <br>
+<% else%>
+    <br>
+    <%= button_to 'Assign To Me', assigntome_path, :class => "btn btn-info" %>
+<% end %>
+
+</div>
+
+<div class="col-sm-6">
+</div>
 
 </div>

@@ -28,6 +28,9 @@
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
+          <%= link_to "My lists", mylists_url, class: "nav-link"%>
+        </li>
+        <li class="nav-item">
           <%= link_to "Sign Out", destroy_user_session_url, :method => :delete, class: "nav-link"%>
         </li>
       <% else %>
@@ -45,5 +48,11 @@
       <p class="alert"><%= alert %></p>
     <%= yield %>
     </div>
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">&copy; Didrik Birkemalm 2020</span>
+      </div>
+  </footer>
   </body>
+  
 </html>

@@ -2,7 +2,7 @@ class ListsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create]
 
     def index
-        @lists = List.all
+        @lists = List.where(assigned_to: nil)
     end
 
     def new
@@ -22,8 +22,25 @@ class ListsController < ApplicationController
         @listitem = Listitem.new()
     end
 
+    def destroy
+        @list = List.find(params[:id])
+        @list.listitems.each do |l|
+            l.destroy
+        end
+        @list.destroy
+        redirect_to lists_path
+    end
+
     def mylists
-        @lists = List.where(user_id = current_user.id)
+        @lists = List.where(user_id: current_user.id)
+        @assignedlists = List.where(assigned_to: current_user.id)
+    end
+
+    def assigntome
+        @list = List.find(params[:id])
+        @list.assigned_to = current_user.id
+        @list.save
+        redirect_to @list
     end
 
     

@@ -7,17 +7,19 @@
 </div>
 <br>
 <div class="row">
-
+<h2 class="col-sm-12">Lists in need of shopping</h2>
+<br>
   <% @lists.each do |l|%>
   <div class="col-sm-3">
     <div class="card">
   <div class="card-body">
     <h5 class="card-title"><%= l.name %></h5>
-    <ul>
-      <li><%= l.country %></li>
-      <li><%= l.town %></li>
-      <li><%= l.postcode %></li>
-    </ul>
+      <span class=""><strong>Country:</strong></span>
+      <p class=""><%= l.country %></p>
+      <span class=""><strong>Town:</strong></span>
+      <p class=""><%= l.town %></p>
+      <span class=""><strong>Postcode:</strong></span>
+      <p class=""><%= l.postcode %></p>
     <%= link_to "Go To List!", list_url(l.id), :class => "btn btn-primary"%>
   </div>
   </div>

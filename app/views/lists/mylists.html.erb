@@ -1,9 +1,35 @@
+<h2>My lists</h2>
 <div class="row">
   <% @lists.each do |l|%>
   <div class="col-sm-3">
+    <% if l.assigned_to == nil %>
+        <div class="card">
+    <% else %>
+        <div class="card assigned">
+    <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= l.name %></h5>
+    <ul>
+      <li><%= l.country %></li>
+      <li><%= l.town %></li>
+      <li><%= l.postcode %></li>
+    </ul>
+    <%= link_to "Go To List!", list_url(l.id), :class => "btn btn-primary"%>
+  </div>
+  </div>
+</div>
+  <% end%>
+</div>
+<br>
+<hr>
+<h2>Lists assigned to me</h2>
+<div class="row">
+
+  <% @assignedlists.each do |l|%>
+  <div class="col-sm-3">
     <div class="card">
   <div class="card-body">
-    <h5 class="card-title"><%= l.list_title %></h5>
+    <h5 class="card-title"><%= l.name %></h5>
     <ul>
       <li><%= l.country %></li>
       <li><%= l.town %></li>
