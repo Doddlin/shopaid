@@ -11,10 +11,15 @@
       <p class=""><%= @list.town %></p>
       <span class=""><strong>Postcode:</strong></span>
       <p class=""><%= @list.postcode %></p>
-      <span class=""><strong>Phone:</strong></span>
-      <p class=""><%= @list.phone %></p>
-      <span class=""><strong>Email:</strong></span>
-      <p class=""><%= User.find(@list.user_id).email %></p>
+      <% if user_signed_in? %>
+        <span class=""><strong>Phone:</strong></span>
+        <p class=""><%= @list.phone %></p>
+        <span class=""><strong>Email:</strong></span>
+        <p class=""><%= User.find(@list.user_id).email %></p>
+        <% else %>
+        <span class=""><strong>Get the contact details by logging in first.</strong></span>
+        <p><%= link_to "Log In/Create Account", new_user_session_url %></p>
+        <% end %>
     </div>
     </div>
 </div>
@@ -48,11 +53,13 @@
     <br>
 <% end %>
 
-<% if @list.assigned_to == current_user.id? %>
-    <br>
-<% else%>
-    <br>
-    <%= button_to 'Assign To Me', assigntome_path, :class => "btn btn-info" %>
+<% if user_signed_in? %>
+    <% if @list.assigned_to == current_user.id? %>
+        <br>
+    <% else%>
+        <br>
+        <%= button_to 'Assign To Me', assigntome_path, :class => "btn btn-info" %>
+    <% end %>
 <% end %>
 
 </div>
