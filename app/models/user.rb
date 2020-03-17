@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :lists
+
+  geocoded_by :city,
+        :latitude => :lat, :longitude => :long
+  after_validation :geocode
 end

@@ -1,11 +1,21 @@
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">COVID 19 came and took the world with storm. However, since it is affecting some groups more than others, this initiative came up.</p>
-  <hr class="my-4">
-  <p>To help high risk people this site will collect their needs shopping-wise and you who do not belong to that same group can assign a list to you and go shop - helping others help others!</p>
-  <p>Register to be able to assign yourself to lists, <%= link_to "click here.", new_user_registration_url %></p>
-  <%= link_to "Register as a shopper!", new_user_registration_url, {:class => "btn btn-primary btn-lg" }%>
-  <%= link_to "Need help? Add your list!", new_list_url, {:class => "btn btn-primary btn-lg" }%>
-  <hr>
-  <h2>Current number of helpers: <%= @helpers %></h2>
+<div class="holder">
+  <div class="jumbotron">
+    <h1 class="display-4"><%= t('hello_world') %></h1>
+    <p class="lead"><%= t('covid') %></p>
+    <hr class="my-4">
+    <p>To help high risk people this site will collect their needs shopping-wise and you who do not belong to that same group can assign a list to you and go shop - helping others help others!</p>
+    <p>Register to be able to assign yourself to lists, <%= link_to "click here.", new_user_registration_url %></p>
+    <%= link_to "Register as a shopper!", new_user_registration_url, {:class => "btn btn-primary btn-lg" }%>
+    <%= link_to "Need help? Add your list!", new_list_url, {:class => "btn btn-primary btn-lg" }%>
+    <hr>
+    <h2>Current number of helpers: <%= @helpers %></h2>
+  </div>
 </div>
+
+<%= map(:center => {
+    :latlng => [51.52238797921441, -0.08366235665359283],
+    :zoom => 4
+  },
+  :markers => @markers
+)
+%>
