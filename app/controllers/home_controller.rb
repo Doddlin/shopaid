@@ -8,8 +8,7 @@ class HomeController < ApplicationController
 
         @markers = @allhelpers.map do |helper|
             {
-                latlng: [helper[:lat], helper[:long]], radius: 300,
-                color: "#333333", fillColor: "#444444", fillOpacity: 1
+                latlng: [helper[:lat], helper[:long]]
             }
         end
     end
