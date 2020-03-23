@@ -1,24 +1,24 @@
 <h1 class="display-1">Welcome to Shopaid.org</h1>
 <h4 class="text-muted">To help people affected by CoVid-19, we asked them to create a shopping list. You can sign up to choose a list and shop for them.</h4>
 <div class="row">
-  <div class="col-sm-12 col-md-6">
+  <div class="col-xs-12 col-md-6">
     <p>This platform is intended to create, and make available, a global network of helpers. The specific target on 
     this site is for the helpers to, amid virus, shop for people belonging to groups at risk.</p>
   </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-xs-12 col-md-6">
     <p>Furthermore this website will make it easy for people that are in need of help but not necessarily very
     comfortable online to get the help they need.</p>
   </div>
 </div>
 <hr>
 <div class="row">
-  <div class="col-sm-12 col-md-6">
+  <div class="col-xs-12 col-md-6">
     <h4 class="text-center">I am in need of help.</h4>
     <p class="text-center">Please click the button below. You will be taken to a form to sign up. Bear in mind that no data is sold to anyone and all users will be deleted as soon as the pandemic has passed.
     After you have signed up you will be able to create your first shopping list.</p>
     <div class="text-center"><%= link_to "Click to register", new_user_registration_url, {:class => "btn btn-primary btn-lg mx-auto" }%></div>
   </div>
-  <div class="col-sm-12 col-md-6">
+  <div class="col-xs-12 col-md-6">
     <h4 class="text-center">I really want to help!</h4>
     <p class="text-center">I am SO glad that I got you to visit this page! Please feel free to register by clicking the button below. As soon as you have registered the number of markers on the map
     will increase by one. When registered, help spread the word of shopaid.org in your stairs or with a note in the elevator. The more non-social-media-users we reach, the more we will help! In advance, I say THANK YOU &#9829;!</p>
@@ -30,13 +30,13 @@
 
 <div class="row">
 <h4>On the map below you will see the markers of <%= @helpers %> different helpers around our globe. A network that just keeps growing!</h4>
-  <div class="col-md-12">
+  <div class="col-xs-12">
 
 <%= map(:center => {
     :latlng => [51.52238797921441, -0.08366235665359283],
     :zoom => 4
   },
-  :markers => @markers
+  :circles => @markers
 )
 %>
 

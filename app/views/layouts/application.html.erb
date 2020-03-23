@@ -4,6 +4,7 @@
     <title>Shopaid</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -57,9 +58,4 @@
       </div>
   </footer>
   </body>
-  <script>
-  var a = [];
-$(marker).each(function(){
-    a.push(marker._latlng);
-});</script>
 </html>
