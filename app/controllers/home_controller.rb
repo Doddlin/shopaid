@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
         @markers = @allhelpers.map do |helper|
             {
-                latlng: [helper[:lat], helper[:long]]
+                latlng: [helper[:lat], helper[:long]],
             }
         end
     end
