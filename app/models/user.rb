@@ -6,7 +6,11 @@ class User < ApplicationRecord
 
   has_many :lists
 
-  geocoded_by :city,
+  def address
+    [city, postcode, country].compact.join(', ')
+  end
+
+  geocoded_by :address,
         :latitude => :lat, :longitude => :long
   after_validation :geocode
 end
