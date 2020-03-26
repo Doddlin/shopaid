@@ -1,5 +1,19 @@
 en:
+
+  home: "Home"
+  lists: "Lists"
+  my_profile: "My Profile"
+  my_lists: "My Lists"
+  log_sign: "Log In / Create Profile"
+
   hello_world: "Welcome to Shopaid.org"
   covid: "COVID 19 came and took the world with storm. However, since it is affecting some groups more than others, this initiative came up."
-  riskgroup: "To help high risk people this site will collect their needs shopping-wise and you who do not belong to that same group can assign a list to you and go shop - helping others help others!"
+  platform: "To help high risk people this site will collect their needs shopping-wise and you who do not belong to that same group can assign a list to you and go shop - helping others help others!"
   riskgroup2: "Furthermore this website will make it easy for people that are in need of help but not necessarily very comfortable online to get the help they need."
+  need_help: "I need help!"
+  need_help_p: "Click the button underneath. It will take you to a form to sign up, after that you will be able to create your first shoppinglist. For your information, Shopaid.org will never share the user data gathered, neither will anything be kept after this pandemic has passed. All will be ereased when the World is again a calm place."
+  offer_help: "I want to help!"
+  offer_help_p_html: "Click down below! You will end up on a form to register. As soon as you have registered you are part of a global network of helpers. Together we will be able to help others have a better life during this crazy time that we are going through. Help to spread the word about Shopaid, the more we are, the more we can help. Put up a not in your store, or in the elevator. In advance I say THANK YOU for your actions! &#9829;"
+  map_text: "On the map below you can see that we currently are %{count} helpers in the network. It just keeps growing!"
+
+  register_btn: "Register!"
