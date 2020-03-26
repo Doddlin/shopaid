@@ -22,6 +22,7 @@ gem 'bootstrap'
 gem 'country_select'
 gem 'leaflet-rails'
 gem 'geocoder'
+gem 'rails-i18n'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

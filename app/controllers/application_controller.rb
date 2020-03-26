@@ -2,13 +2,13 @@ class ApplicationController < ActionController::Base
 
 
  
-  def switch_locale(&action)
-    country = request.location.country_code
-    locale = country.downcase || "en"
-    I18n.with_locale(locale, &action)
-  end
+  ## def switch_locale(&action)
+  ##  country = request.location.country_code
+  ##  locale = country.downcase || "en"
+  ##  I18n.with_locale(locale, &action)
+  ## end
 
-  around_action :switch_locale
+  ##around_action :switch_locale
 
    protect_from_forgery with: :exception
 

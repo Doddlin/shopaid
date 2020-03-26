@@ -12,7 +12,6 @@ class HomeController < ApplicationController
             }
         end
 
-        session[:locale] = 'se'
 
     end
 end
