@@ -11,5 +11,8 @@ class HomeController < ApplicationController
                 latlng: [helper[:lat], helper[:long]],
             }
         end
+
+        session[:locale] = 'se'
+
     end
 end
