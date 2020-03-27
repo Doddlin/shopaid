@@ -1,18 +1,32 @@
 class ApplicationController < ActionController::Base
-
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  protect_from_forgery with: :exception
+  before_action :set_locale
 
  
-  ## def switch_locale(&action)
+  ##def switch_locale(&action)
   ##  country = request.location.country_code
-  ##  locale = country.downcase || "en"
+  ##  locale = country.downcase
   ##  I18n.with_locale(locale, &action)
-  ## end
+  ##end
+  
+  
+  
 
   ##around_action :switch_locale
 
-   protect_from_forgery with: :exception
+   
 
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  
+
+  private
+  def set_locale
+    I18n.locale = extract_locale || I18n.default_locale
+  end
+  def extract_locale
+    parsed_locale = request.location.country_code.downcase
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
 
     protected
 
