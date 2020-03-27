@@ -1,4 +1,24 @@
 se:
-  hello_world: "Hej, Världen!"
+
+  ## MENY ##
+  home: "Hem"
+  lists: "Listor"
+  my_profile: "Min profil"
+  my_lists: "Mina listor"
+  log_sign: "Logga in / Skapa profil"
+  ########
+
+  ## INDEX ##
+  hello_world: "Välkommen till Shopaid.org!"
   covid: "COVID-19 tog världen med storm. Eftersom vissa grupper är mer drabbade än andra föddes detta initiativ."
   riskgroup: "För att kunna hjälpa de som tillhör riskgrupper ämnar denna sidan samla in inköpslistor och göra dem tillgängliga för oss som faktiskt kan gå ut och handla. Poängen med sidan är att hjälpa andra hjälpa andra."
+  platform: "Denna plattform skapades för att göra ett globalt nätverk av hjälpare tillgängliga för flera. Just nu är plattformen fokuserad på att hjälpa folk som tillhör riskgrupper"
+  riskgroup2: "Hemsidan är också skapad för att de som inte är helt hemma på internet enkelt ska kunna få hjälp"
+  need_help: "Jag behöver hjälp"
+  need_help_p: "Klicka på knappen här under. Du tas till ett formulär för att registrera dig. Efter det kan du skapa din första inköpslista. Shopaid.org kommer inte att sälja någon data, vi kommer heller inte spara någonting, allt raderas så fort situationen på jorden lugnat sig."
+  offer_help: "Jag vill hjälpa"
+  offer_help_p_html: "Jag är SÅ glad att just du har hittat hit! För att registrera dig, klicka på knappen här under. Så fort du är registrerad är du del av ett globalt nätverk av hjälpare som tillsammans kan göra livet enklare för andra. Hjälp till att sprida ordet om Shopaid.org för att fler ska kunna ta del av det. Ju fler vi är, ju bättre är det! Sätt upp en lapp vet jag! Stort tack för din insats på förhand! &#9829;"
+  map_text: "På kartan här kan du se alla %{count} som just nu är registrerade hjälpare runt om i världen, i ett nätverk som bara fortsätter växa!"
+
+  ## KOMPONENTER ##
+  register_btn: "Registrera dig!"

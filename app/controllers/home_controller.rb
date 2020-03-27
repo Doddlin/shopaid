@@ -11,5 +11,7 @@ class HomeController < ApplicationController
                 latlng: [helper[:lat], helper[:long]],
             }
         end
+
+
     end
 end
