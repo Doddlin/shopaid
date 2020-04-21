@@ -24,6 +24,7 @@ gem 'leaflet-rails'
 gem 'geocoder'
 gem 'rails-i18n'
 gem 'http_accept_language'
+gem 'twitter', '~> 6.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

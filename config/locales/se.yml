@@ -6,6 +6,7 @@ se:
   my_profile: "Min profil"
   my_lists: "Mina listor"
   log_sign: "Logga in / Skapa profil"
+  log_off: "Logga ut"
   ########
 
   ## INDEX ##
@@ -22,3 +23,10 @@ se:
 
   ## KOMPONENTER ##
   register_btn: "Registrera dig!"
+
+  ## USER ##
+
+  sign_up: "Registrera dig"
+  to_help: "Vill du hjälpa till?"
+  want_to_help: "Gör mig till en hjälte!"
+  to_help_text: "Genom att bocka i rutan blir du en del av ett globalt nätverk av vardagshjältar som kan ge människor i sant behov av hjälp den hjälp de faktiskt behöver."

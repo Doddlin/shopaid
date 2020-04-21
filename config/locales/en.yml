@@ -5,6 +5,7 @@ en:
   my_profile: "My Profile"
   my_lists: "My Lists"
   log_sign: "Log In / Create Profile"
+  log_off: "Log Off"
 
   hello_world: "Welcome to Shopaid.org"
   covid: "COVID 19 came and took the world with storm. However, since it is affecting some groups more than others, this initiative came up."
@@ -17,3 +18,8 @@ en:
   map_text: "On the map below you can see that we currently are %{count} helpers in the network. It just keeps growing!"
 
   register_btn: "Register!"
+
+  sign_up: "Sign Up"
+  to_help: "Want to be a hero?"
+  want_to_help: "I want to be a hero!"
+  to_help_text: "By ticking the box you will be part of the foundational group of everyday heroes providing real help to people in need."
